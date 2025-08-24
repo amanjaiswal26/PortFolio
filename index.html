@@ -1,151 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aman Jaiswal | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- ===== NAVBAR ===== -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Aman Jaiswal</h1>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- ===== HERO SECTION ===== -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Jaiswal | Software Developer</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Particles.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Typed.js for typing effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Aman Jaiswal</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#skills">Skills</a></li>
+                <li class="nav-item"><a href="#projects">Projects</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <p class="intro">Hello, I'm</p>
-            <h1>Aman Jaiswal</h1>
-            <h2>Final-Year B.Tech Student | Software Developer | Cybersecurity Enthusiast</h2>
-            <p class="hero-desc">
-                I am an aspiring software developer currently pursuing my B.Tech in Computer Science at VIT Bhopal.
-                I am passionate about building secure, scalable, and user-friendly applications.
-                I specialize in full-stack development, cloud computing, and cybersecurity, and I'm always excited to learn and implement emerging technologies.
-            </p>
-            <div class="buttons">
-                <a href="#projects" class="btn primary-btn">See My Projects</a>
-                <a href="AMANsResume3.pdf" download class="btn secondary-btn">Download Resume</a>
+            <div class="hero-text">
+                <p class="hero-subtitle">Hello, I'm</p>
+                <h1 class="hero-title">Aman Jaiswal</h1>
+                <div class="hero-typed">
+                    <span id="typed-text"></span>
+                </div>
+                <p class="hero-description">
+                    I am an aspiring software developer currently pursuing my B.Tech in Computer Science at VIT Bhopal.
+                    I am passionate about building secure, scalable, and user-friendly applications with cutting-edge
+                    technologies.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> See My Projects
+                    </a>
+                    <a href="./AMANsResume3.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image-container">
+                    <div class="profile-glow"></div>
+                    <img src="./myphoto.jpg" 
+                         alt="Aman Jaiswal - Software Developer" 
+                         class="profile-image">
+                </div>
             </div>
         </div>
-        <div class="hero-img">
-            <img src="myphoto.jpg" alt="Aman Jaiswal" />
-        </div>
-    </section>
-
-    <!-- ===== ABOUT ME ===== -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I'm a passionate Computer Science Engineering student at VIT Bhopal, currently in my 4th year with a minor in Cybersecurity.
-            I love solving real-world problems with technology and enjoy working on full-stack applications, cloud platforms, and secure systems.
-            My projects include working with **React, Node.js, Firebase, AWS, and cryptography techniques**.
-        </p>
-        <p>
-            I believe in continuous learning and enjoy exploring fields like cybersecurity, machine learning, and cloud-native architectures.
-            My goal is to combine my skills in software development and security to build **modern, efficient, and safe solutions**.
-        </p>
-        <div class="stats">
-            <div class="stat-box">
-                <h3>15+</h3>
-                <p>Completed Projects</p>
-            </div>
-            <div class="stat-box">
-                <h3>5+</h3>
-                <p>Major Academic Projects</p>
-            </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
-    <section id="skills" class="skills">
-        <h2>Technical Skills</h2>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm a passionate Computer Science Engineering student at VIT Bhopal, currently in my 4th year with a
+                    minor in Cybersecurity. I love solving real-world problems with technology and enjoy working on
+                    full-stack applications,
+                    cloud platforms, and secure systems.
+                </p>
+                <p>
+                    I believe in continuous learning and enjoy exploring fields like cybersecurity, machine learning,
+                    and cloud-native architectures. My goal is to combine my skills in software development and security
+                    to build modern, efficient, and
+                    safe solutions.
+                </p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Completed Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Major Academic Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <img src="icons/code.png" alt="Languages">
-                <h3>Programming Languages</h3>
-                <p>C, C++, Java, Python, JavaScript</p>
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="skill-title">Programming Languages</h3>
+                <p class="skill-list">C, C++, Java, Python, JavaScript</p>
             </div>
             <div class="skill-card">
-                <img src="icons/framework.png" alt="Frameworks">
-                <h3>Frameworks & Libraries</h3>
-                <p>React, Node.js, Next.js, Flask, Bootstrap</p>
+                <div class="skill-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3 class="skill-title">Frameworks & Libraries</h3>
+                <p class="skill-list">React, Node.js, Next.js, Flask, Bootstrap</p>
             </div>
             <div class="skill-card">
-                <img src="icons/database.png" alt="Database">
-                <h3>Databases</h3>
-                <p>Firebase, MySQL, MongoDB</p>
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="skill-title">Databases</h3>
+                <p class="skill-list">Firebase, MySQL, MongoDB</p>
             </div>
             <div class="skill-card">
-                <img src="icons/tools.png" alt="Tools">
-                <h3>Tools & Testing</h3>
-                <p>Git, GitHub, JMeter, Burp Suite, Nessus</p>
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="skill-title">Tools & Testing</h3>
+                <p class="skill-list">Git, GitHub, JMeter, Burp Suite, Nessus</p>
             </div>
             <div class="skill-card">
-                <img src="icons/cloud.png" alt="Cloud">
-                <h3>Cloud & Deployment</h3>
-                <p>AWS, Docker, Vercel</p>
+                <div class="skill-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3 class="skill-title">Cloud & Deployment</h3>
+                <p class="skill-list">AWS, Docker, Vercel</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-container">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
             <div class="project-card">
-                <h3>Agrify – Crop Recommendation System</h3>
-                <p>
-                    Built a machine learning-based system that recommends crops based on soil type, rainfall, and temperature.
-                    Integrated **real-time weather data** using the OpenWeatherMap API and visualized outputs with Matplotlib and Seaborn.
+                <h3 class="project-title">Agrify – Crop Recommendation System</h3>
+                <p class="project-description">
+                    Built a machine learning-based system that recommends crops based on soil type, rainfall, and
+                    temperature. Integrated real-time weather data using the OpenWeatherMap API and visualized outputs
+                    with
+                    Matplotlib and Seaborn.
                 </p>
-                <p><strong>Tech Used:</strong> Python, Pandas, Matplotlib, APIs</p>
+                <p class="project-tech"><strong>Tech Used:</strong> Python, Pandas, Matplotlib, APIs</p>
             </div>
             <div class="project-card">
-                <h3>SellingYaa – Full-Stack E-Commerce</h3>
-                <p>
+                <h3 class="project-title">SellingYaa – Full-Stack E-Commerce</h3>
+                <p class="project-description">
                     Designed a scalable full-stack e-commerce web app using React.js, Node.js, Firebase, and Bootstrap.
-                    Integrated **secure authentication**, cart management, and a simulated payment system.
+                    Integrated secure authentication, cart management, and a simulated payment system.
                 </p>
-                <p><strong>Tech Used:</strong> React, Node.js, Firebase, Bootstrap</p>
+                <p class="project-tech"><strong>Tech Used:</strong> React, Node.js, Firebase, Bootstrap</p>
             </div>
             <div class="project-card">
-                <h3>Triple DES Image Encryption</h3>
-                <p>
-                    Developed a secure **image encryption and decryption tool** using the **Triple DES algorithm** in C++.
-                    Ensured **confidentiality, integrity, and secure transmission** of sensitive image data.
-                    Designed for **data security and privacy**, demonstrating how cryptographic algorithms protect against unauthorized access.
+                <h3 class="project-title">Triple DES Image Encryption</h3>
+                <p class="project-description">
+                    Developed a secure image encryption and decryption tool using the Triple DES algorithm in C++.
+                    Ensured confidentiality, integrity, and secure transmission of sensitive image data with advanced
+                    cryptographic techniques.
                 </p>
-                <p><strong>Tech Used:</strong> C++, Cryptography, Data Security</p>
+                <p class="project-tech"><strong>Tech Used:</strong> C++, Cryptography, Data Security</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to collaborate, discuss projects, or have opportunities, feel free to reach out!</p>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:amanjaiswalfordell@gmail.com">amanjaiswalfordell@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919836308729">+91 98363 08729</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/aman-jaiswal-26aug/" target="_blank">linkedin.com/in/aman-jaiswal</a></p>
-            <p>GitHub: <a href="https://github.com/amanjaiswal26" target="_blank">github.com/amanjaiswal26</a></p>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-content">
+            <p class="contact-text">
+                If you'd like to collaborate, discuss projects, or have opportunities, feel free to reach out!
+                I'm always excited to connect with fellow developers and explore new possibilities.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:amanjaiswalfordell@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    Email Me
+                </a>
+                <a href="tel:+919836308729" class="contact-link">
+                    <i class="fas fa-phone"></i>
+                    Call Me
+                </a>
+                <a href="https://www.linkedin.com/in/aman-jaiswal-26aug/" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/amanjaiswal26" target="_blank" class="contact-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2025 Aman Jaiswal | All Rights Reserved</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">© 2025 Aman Jaiswal | All Rights Reserved</p>
     </footer>
+
+    <script>
+        // ===== CUSTOM CURSOR =====
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let followerX = 0;
+        let followerY = 0;
+
+        // Update cursor position
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        // Smooth follower animation
+        function animateFollower() {
+            followerX += (mouseX - followerX) * 0.1;
+            followerY += (mouseY - followerY) * 0.1;
+            
+            cursorFollower.style.left = followerX + 'px';
+            cursorFollower.style.top = followerY + 'px';
+            
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+
+        // Cursor hover effects
+        const hoverElements = document.querySelectorAll('a, button, .btn, .nav-item, .skill-card, .project-card, .contact-link');
+        
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+                cursorFollower.classList.add('cursor-follower-hover');
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+                cursorFollower.classList.remove('cursor-follower-hover');
+            });
+        });
+
+        // ===== GSAP ANIMATIONS =====
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Loading Animation
+        window.addEventListener('load', () => {
+            const loading = document.getElementById('loading');
+
+            gsap.to(loading, {
+                opacity: 0,
+                duration: 0.5,
+                delay: 1,
+                onComplete: () => {
+                    loading.style.display = 'none';
+                    initAnimations();
+                }
+            });
+        });
+
+        function initAnimations() {
+            // Hero animations
+            const tl = gsap.timeline();
+
+            tl.to('.hero-subtitle', { opacity: 1, y: 0, duration: 0.8 })
+                .to('.hero-title', { opacity: 1, y: 0, duration: 0.8 }, '-=0.4')
+                .to('.hero-description', { opacity: 1, y: 0, duration: 0.8 }, '-=0.4')
+                .to('.hero-buttons', { opacity: 1, y: 0, duration: 0.8 }, '-=0.4')
+                .to('.hero-image', { opacity: 1, scale: 1, duration: 1 }, '-=0.6');
+
+            // Skills Animation
+            gsap.utils.toArray('.skill-card').forEach((card, i) => {
+                gsap.fromTo(card,
+                    { opacity: 0, y: 50 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top 80%'
+                        }
+                    }
+                );
+            });
+
+            // Projects Animation
+            gsap.utils.toArray('.project-card').forEach((card, i) => {
+                gsap.fromTo(card,
+                    { opacity: 0, scale: 0.8 },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: 'top 80%'
+                        }
+                    }
+                );
+            });
+
+            // About section animations
+            gsap.fromTo('.about-text',
+                { opacity: 0, x: -50 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: '.about-content',
+                        start: 'top 70%'
+                    }
+                }
+            );
+
+            gsap.fromTo('.stats',
+                { opacity: 0, x: 50 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: '.about-content',
+                        start: 'top 70%'
+                    }
+                }
+            );
+        }
+
+        // ===== PARTICLES INITIALIZATION =====
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" },
+                    polygon: { nb_sides: 5 }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 4,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                    repulse: { distance: 100, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 }
+                }
+            },
+            retina_detect: true
+        });
+
+        // ===== SCROLL PROGRESS BAR =====
+        window.addEventListener("scroll", () => {
+            const scrollProgress = document.getElementById("scroll-progress");
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = scrolled + "%";
+        });
+
+        // ===== NAVBAR SCROLL EFFECT =====
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+        // ===== HAMBURGER MENU =====
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        // Close menu on click
+        document.querySelectorAll(".nav-item a").forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("active");
+            });
+        });
+
+        // ===== TYPED TEXT =====
+        const typed = new Typed("#typed-text", {
+            strings: [
+                "Software Developer",
+                "Cybersecurity Enthusiast",
+                "Full-Stack Developer",
+                "Cloud Computing Explorer"
+            ],
+            typeSpeed: 70,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true
+        });
+
+        // ===== SMOOTH SCROLLING =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ===== PARALLAX EFFECT FOR HERO IMAGE =====
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.profile-image-container');
+            const speed = scrolled * 0.5;
+            
+            if (parallax && scrolled < window.innerHeight) {
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // ===== MAGNETIC EFFECT FOR BUTTONS =====
+        const magneticElements = document.querySelectorAll('.btn, .contact-link');
+        
+        magneticElements.forEach(element => {
+            element.addEventListener('mousemove', (e) => {
+                const rect = element.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                
+                element.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = 'translate(0px, 0px)';
+            });
+        });
+    </script>
 </body>
+
 </html>
